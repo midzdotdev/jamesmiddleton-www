@@ -16,7 +16,7 @@ const html =
   "social media": [
       "<a href="https://twitter.com/james2mid">Twitter</a>",
       "<a href="https://github.com/james2mid">GitHub</a>",
-      "<a href="https://www.linkedin.com/in/james-middleton-8944484b">LinkedIn</a>",
+      "<a href="https://www.linkedin.com/in/james-middleton-8944484b">LinkedIn</a>"
   ]
 }`
 
