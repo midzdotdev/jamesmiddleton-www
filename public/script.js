@@ -1,6 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById('center-container')
-  present(container)
+
+  let skipAnimation = false
+
+  if (sessionStorage.getItem('animated')) {
+    skipAnimation = true
+  } else {
+    sessionStorage.setItem('animated', true)
+  }
+
+  present(container, skipAnimation)
 })
 
 const html =
@@ -20,9 +29,14 @@ const html =
   ]
 }`
 
-async function present (container) {
+async function present (container, skipAnimation) {
   const p = document.createElement('p')
   container.appendChild(p)
+
+  if (skipAnimation) {
+    p.innerHTML = html
+    return
+  }
 
   p.innerHTML = '<span class="cursor"></span>'
 
