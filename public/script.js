@@ -11,11 +11,12 @@ const html =
   "projects": [
       "<a href="http://cryptoinsights.online">CryptoInsights</a>",
       "<a href="https://github.com/james2mid/wgr-mn-notify">Masternode Notifier</a>",
-      "<a href="https://github.com/james2mid/G-Sim" class="inactive">G-Sim</a>"
+      "<a href="https://github.com/james2mid/G-Sim">G-Sim</a> (archived)"
   ],
   "social media": [
       "<a href="https://twitter.com/james2mid">Twitter</a>",
-      "<a href="https://github.com/james2mid">GitHub</a>"
+      "<a href="https://github.com/james2mid">GitHub</a>",
+      "<a href="https://www.linkedin.com/in/james-middleton-8944484b">LinkedIn</a>",
   ]
 }`
 
