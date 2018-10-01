@@ -9,6 +9,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "browser-sync start --config bs-config.js",
+    "deploy": "pm2 deploy production update",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
