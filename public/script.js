@@ -1,3 +1,8 @@
+const START_INTERVAL = 2000
+const KEYSTROKE_INTERVAL = 40
+const NEWLINE_INTERVAL = 400
+const END_INTERVAL = 3000
+
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById('center-container')
 
@@ -12,16 +17,18 @@ document.addEventListener("DOMContentLoaded", () => {
   present(container, skipAnimation)
 })
 
-const html =
+const content =
 `{
   "name": "James Middleton",
   "location": "East Midlands, UK",
-  "occupation": "Student / Programmer",
+  "occupation": "Software Developer",
   "email": "<a href="mailto:hi@jamesmiddleton.me">hi@jamesmiddleton.me</a>",
-  "projects": [
-      "<a href="http://cryptoinsights.online">CryptoInsights</a>",
-      "<a href="https://github.com/james2mid/wgr-mn-notify">Masternode Notifier</a>",
-      "<a href="https://github.com/james2mid/G-Sim">G-Sim</a> (archived)"
+  "active projects": [
+      "<a href="http://cryptoinsights.online">CryptoInsights</a>"
+  ],
+  "archived projects: [
+      "<a href="https://github.com/james2mid/wgr-mn-notify">Wagerr Masternode Notifier</a>",
+      "<a href="https://github.com/james2mid/G-Sim">Gravitational Forces Simulator</a>"
   ],
   "social media": [
       "<a href="https://twitter.com/james2mid">Twitter</a>",
@@ -35,17 +42,27 @@ async function present (container, skipAnimation) {
   container.appendChild(p)
 
   if (skipAnimation) {
-    p.innerHTML = html
+    p.innerHTML = content
     return
   }
 
-  p.innerHTML = '<span class="cursor"></span>'
+  for (let i = 1; i <= 5;  i++) {
+    let html = 'DOWNLOADING TRANSMISSION'
+    for (let i2 = 0; i2 < i; i2++) {
+      html += '.'
+    }
+    html += '<span class="cursor"></span>'
 
-  await wait(2000)
+    p.innerHTML = html
+
+    await wait(NEWLINE_INTERVAL * 2)
+  }
+
+  await wait(START_INTERVAL)
   
   // replace newlines for html's br tag
   const preparedHTML = (() => {
-    let lines = html.split('\n')
+    let lines = content.split('\n')
     return lines.join('<br>')
   })()
 
@@ -65,7 +82,7 @@ async function present (container, skipAnimation) {
       const tagText = preparedHTML.slice(i, tagEndIndex+1)
       if (tagText === '<br>') {
         // pause at the end of lines
-        await wait(300)
+        await wait(NEWLINE_INTERVAL)
       }
 
       i = tagEndIndex
@@ -86,10 +103,10 @@ async function present (container, skipAnimation) {
       p.innerHTML += '<br>}'
     }
 
-    await wait(50)
+    await wait(KEYSTROKE_INTERVAL)
   }
 
-  await wait(2000)
+  await wait(END_INTERVAL)
   p.innerHTML = preparedHTML
 }
 
