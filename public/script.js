@@ -17,6 +17,7 @@ const html =
   "name": "James Middleton",
   "location": "East Midlands, UK",
   "occupation": "Student / Programmer",
+  "email": "<a href="mailto:hi@jamesmiddleton.me">hi@jamesmiddleton.me</a>",
   "projects": [
       "<a href="http://cryptoinsights.online">CryptoInsights</a>",
       "<a href="https://github.com/james2mid/wgr-mn-notify">Masternode Notifier</a>",
