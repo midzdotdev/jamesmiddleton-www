@@ -1,24 +1,19 @@
 {
-  "name": "jamesmiddleton.me",
-  "version": "1.0.0",
-  "description": "Personal website",
-  "dependencies": {
-    "normalize.css": "^8.0.0"
-  },
-  "devDependencies": {},
+  "name": "jamesmiddleton-www",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "browser-sync start --config bs-config.js",
-    "deploy": "pm2 deploy production update",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "aws s3 sync public/ s3://jamesmiddleton-www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/james2mid/jamesmiddleton.me.git"
+  "dependencies": {
+    "normalize": "^0.3.1"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/james2mid/jamesmiddleton.me/issues"
-  },
-  "homepage": "https://github.com/james2mid/jamesmiddleton.me#readme"
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
 }
