@@ -6,13 +6,13 @@
         <p class="title is-size-1 title has-text-black-ter">
           I'm
 
-          <transition name="slide-fade" mode="out-in" appear>
+          <transition name="text-transition" mode="out-in" appear>
             <span :key="preText">
               {{ preText }}
             </span>
           </transition>
 
-          <transition name="slide-fade" mode="out-in" appear>
+          <transition name="text-transition" mode="out-in" appear>
             <span :key="mainText">
               {{ mainText }}.
             </span>

@@ -15,15 +15,19 @@
 
       <div id="menu" :class="{ 'navbar-menu': true, 'is-active': showMobileMenu }">
         <div class="navbar-end">
-          <router-link to="/" :class="{ 'navbar-item': true, 'is-active': $route.path === '/'}">Home</router-link>
-          <router-link to="/portfolio" :class="{ 'navbar-item': true, 'is-active': $route.path === '/portfolio'}">Portfolio</router-link>
-          <router-link to="/services" :class="{ 'navbar-item': true, 'is-active': $route.path === '/services'}">Services</router-link>
-          <router-link to="/contact" :class="{ 'navbar-item': true, 'is-active': $route.path === '/contact'}">Contact</router-link>
+          <router-link
+            v-for="page in pages"
+            :key="page.path"
+            :to="page.path"
+            :class="{ 'navbar-item': true, 'is-active': $route.path === page.path}"
+          >{{ page.text }}</router-link>
         </div>
       </div>
     </nav>
 
-    <router-view/>
+    <transition :name="transitionName" mode="out-in" appear>
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -32,6 +36,28 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Home extends Vue {
+  pages = [
+    { text: 'Home', path: '/' },
+    { text: 'Portfolio', path: '/portfolio' },
+    { text: 'Services', path: '/services' },
+    { text: 'Contact', path: '/contact' }
+  ]
+
   showMobileMenu = false
+  transitionName = 'page-transition-left'
+
+  /** Updates `transitionName` depending on navigation direction. */
+  created () {
+    this.$watch('$route', (to, from) => {
+      const pageOrder = this.pages.map(x => x.path)
+
+      const originIndex = pageOrder.findIndex(x => x === from.path)
+      const destinationIndex = pageOrder.findIndex(x => x === to.path)
+
+      this.transitionName = originIndex > destinationIndex
+        ? 'page-transition-left'
+        : 'page-transition-right'
+    })
+  }
 }
 </script>
