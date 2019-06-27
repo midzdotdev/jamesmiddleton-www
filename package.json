@@ -1,19 +1,42 @@
 {
   "name": "jamesmiddleton-www",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "deploy": "aws s3 sync public/ s3://jamesmiddleton-www"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "normalize": "^0.3.1"
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0",
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-plugin-typescript": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "lint-staged": "^8.1.5",
+    "sass": "^1.18.0",
+    "sass-loader": "^7.1.0",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }
