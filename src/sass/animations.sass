@@ -6,51 +6,21 @@
   transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0)
 
 .text-transition-enter, .text-transition-leave-to
-  transform: translateX(100px)
   opacity: 0
 
-// page-transition-left
-@keyframes pageTransitionLeft 
-  from 
-    transform: translate3d(-40px, 0, 0)
+.text-transition-move
+  transition: transform 1s
 
-  to 
-    transform: translate3d(0, 0, 0)
-    opacity: 1
-
-.page-transition-left-leave-to 
+// page-transition
+.page-transition-enter
+  transform: translate(40px)
   opacity: 0
-  transition: opacity .3s
 
-.page-transition-left-enter 
+.page-transition-enter-active
+  transition: all .5s ease
+
+.page-transition-leave-active
+  transition: all .2s ease
+
+.page-transition-leave-to
   opacity: 0
-  transform: translate3d(-40px, 0, 0)
-
-.page-transition-left-enter-to 
-  opacity: 0
-  animation-duration: .7s
-  animation-fill-mode: both
-  animation-name: pageTransitionLeft
-
-// page-transition-right
-@keyframes pageTransitionRight 
-  from 
-    transform: translate3d(40px, 0, 0)
-
-  to 
-    transform: translate3d(0, 0, 0)
-    opacity: 1
-
-.page-transition-right-leave-to 
-  opacity: 0
-  transition: opacity .3s
-
-.page-transition-right-enter 
-  opacity: 0
-  transform: translate3d(40px, 0, 0)
-
-.page-transition-right-enter-to 
-  opacity: 0
-  animation-duration: .7s
-  animation-fill-mode: both
-  animation-name: pageTransitionRight
