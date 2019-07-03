@@ -14,11 +14,11 @@ The terms used in this Agreement are defined below.
 
 1.5 **“Patches”** means additional programming code to be integrated with the Software to correct a Bug or alleviate its effects.
 
-1.6 **“Software License”** means possessing the right to use the specific Software product for which the Software License was purchased.
+1.6 **“Quote”** means the Developer sales quote detailing Developer’s offer to license products and/or provide support and maintenance to Customer.
 
-1.7 **“Source Code”** means computer programming code in human readable form that is not suitable for machine execution without the intervening steps of interpretation or compilation.
+1.7 **“Software License”** means possessing the right to use the specific Software product for which the Software License was purchased.
 
-1.8 **“Quote”** means the Developer sales quote detailing Developer’s offer to license products and/or provide support and maintenance to Customer.
+1.8 **“Source Code”** means computer programming code in human readable form that is not suitable for machine execution without the intervening steps of interpretation or compilation.
 
 1.9 **“Workaround(s)”** means a series of instructions, procedural steps or usage clarifications to avoid a Bug or circumvent its effects. A Workaround does not involve issuance of new programming code.
 
