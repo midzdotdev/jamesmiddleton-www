@@ -1,17 +1,19 @@
 <template>
   <div id="portfolio" class="container">
     <div style="display: flex; flex-wrap: wrap; justify-content: center">
-      <div
+      <a
         v-for="item in items"
         :key="item.title"
         class="portfolio-item notification is-dark level"
         @mouseenter="current = item"
         @mouseleave="current = null"
+        :href="item.link"
+        target="_blank"
       >
         <div class="container">
-          <h2 class="title is-size-2 has-text-centered" key="title">{{ item.title }}</h2>
+          <h2 class="title is-size-2 has-text-centered">{{ item.title }}</h2>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>
