@@ -1,26 +1,28 @@
 <template>
   <div id="home" class="container">
-    <p class="title is-size-3 subtitle">I'm James.</p>
-    <p class="title is-size-1 title has-text-black-ter">
-      I'm
+    <section class="section">
+      <p class="title is-size-3 subtitle">I'm James.</p>
+      <p class="title is-size-1 title has-text-black-ter">
+        I'm
 
-      <transition name="text-transition" mode="out-in">
-        <span :key="determiner">
-          {{ determiner }}
-        </span>
-      </transition>
+        <transition name="text-transition" mode="out-in">
+          <span :key="determiner">
+            {{ determiner }}
+          </span>
+        </transition>
 
-      <transition name="text-transition" mode="out-in" appear>
-        <span :key="noun">
-          {{ noun }}.
-        </span>
-      </transition>
-    </p>
+        <transition name="text-transition" mode="out-in" appear>
+          <span :key="noun">
+            {{ noun }}.
+          </span>
+        </transition>
+      </p>
 
-    <div class="buttons">
-      <router-link to="/portfolio" class="button is-outlined is-dark">VIEW MY WORK</router-link>
-      <router-link to="/contact" class="button is-outlined is-dark">HIRE ME</router-link>
-    </div>
+      <div class="buttons">
+        <router-link to="/portfolio" class="button is-outlined is-dark">VIEW MY WORK</router-link>
+        <router-link to="/contact" class="button is-outlined is-dark">HIRE ME</router-link>
+      </div>
+    </section>
   </div>
 </template>
 
