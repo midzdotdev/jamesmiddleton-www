@@ -34,7 +34,7 @@ export default class Portfolio extends Vue {
         Learn, trade, automate, share, earn and gain insights from one place.
       `,
       repo: 'https://github.com/james2mid/cryptobase-www',
-      link: 'https://cryptoinsights.online'
+      link: 'https://cryptobase.cc'
     },
     {
       title: 'JM',
