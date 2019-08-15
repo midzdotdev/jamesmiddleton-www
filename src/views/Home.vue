@@ -5,14 +5,14 @@
       I'm
 
       <transition name="text-transition" mode="out-in">
-        <span :key="preText">
-          {{ preText }}
+        <span :key="determiner">
+          {{ determiner }}
         </span>
       </transition>
 
       <transition name="text-transition" mode="out-in" appear>
-        <span :key="mainText">
-          {{ mainText }}.
+        <span :key="noun">
+          {{ noun }}.
         </span>
       </transition>
     </p>
@@ -29,33 +29,34 @@ import { Component, Vue } from 'vue-property-decorator'
 
 const duration = 5000
 
-const services = [
+const nouns = [
   'developer',
   'designer',
   'consultant',
-  'architect'
+  'architect',
+  'ideator'
 ]
 
 @Component
 export default class Home extends Vue {
   index = 0
 
-  get preText () {
+  get determiner () {
     const vowels = ['a', 'e', 'i', 'o', 'u']
-    if (vowels.includes(this.mainText[0])) {
+    if (vowels.includes(this.noun[0])) {
       return 'an'
     } else {
       return 'a'
     }
   }
 
-  get mainText () {
-    return services[this.index]
+  get noun () {
+    return nouns[this.index]
   }
 
   created () {
     setInterval(() => {
-      this.index === services.length - 1
+      this.index === nouns.length - 1
         ? this.index = 0
         : this.index++
     }, duration)
