@@ -35,8 +35,7 @@ const nouns = [
   'developer',
   'designer',
   'consultant',
-  'architect',
-  'ideator'
+  'architect'
 ]
 
 @Component
