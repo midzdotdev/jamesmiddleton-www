@@ -4,7 +4,7 @@
       <nav class="navbar is-transparent is-spaced">
         <div class="navbar-brand">
           <router-link to="/" class="navbar-item">
-            <img src="./assets/logo.svg" style="height: 5rem">
+            <img src="/logo.svg" style="height: 5rem">
           </router-link>
 
           <a @click="showMobileMenu = !showMobileMenu" :class="{ 'navbar-burger burger': true, 'is-active': showMobileMenu }" data-target="menu">
