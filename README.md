@@ -10,6 +10,4 @@ In case you're wondering how this was created and deployed, here are the details
 * Created with [Vue.js](https://vuejs.org) for the front-end framework
 * Uses [Bulma](https://bulma.io) as a basis for styling
 * With Vue using [Webpack](https://webpack.js.org), it provides a fantastic live local server for development
-* The minified build is stored on an [Amazon S3](https://aws.amazon.com/s3/) bucket as a static website
-* [Amazon CloudFront](https://aws.amazon.com/cloudfront/) manages distribution and delivery
-* CloudFront uses the SSL certificates stored with Amazon to provide access to the website over HTTPS
+* Continuous deployment (CD) and hosting is handled by [Netlify](https://netlify.com) for free
