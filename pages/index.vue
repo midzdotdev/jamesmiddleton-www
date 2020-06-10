@@ -19,8 +19,8 @@
       </p>
 
       <div class="buttons">
-        <router-link to="/portfolio" class="button is-outlined is-dark">VIEW MY WORK</router-link>
-        <router-link to="/contact" class="button is-outlined is-dark">HIRE ME</router-link>
+        <nuxt-link to="/portfolio" class="button is-outlined is-dark">VIEW MY WORK</nuxt-link>
+        <nuxt-link to="/contact" class="button is-outlined is-dark">HIRE ME</nuxt-link>
       </div>
     </section>
   </div>
@@ -38,7 +38,9 @@ const nouns = [
   'architect'
 ]
 
-@Component
+@Component({
+
+})
 export default class Home extends Vue {
   index = 0
 

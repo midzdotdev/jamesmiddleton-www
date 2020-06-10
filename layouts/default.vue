@@ -3,9 +3,9 @@
     <div class="hero-head">
       <nav class="navbar is-transparent is-spaced">
         <div class="navbar-brand">
-          <router-link to="/" class="navbar-item">
+          <nuxt-link to="/" class="navbar-item">
             <img src="/logo.svg" style="height: 5rem">
-          </router-link>
+          </nuxt-link>
 
           <a @click="showMobileMenu = !showMobileMenu" :class="{ 'navbar-burger burger': true, 'is-active': showMobileMenu }" data-target="menu">
             <span aria-hidden="true"></span>
@@ -16,12 +16,12 @@
 
         <div id="menu" :class="{ 'navbar-menu': true, 'is-active': showMobileMenu }">
           <div class="navbar-end">
-            <router-link
+            <nuxt-link
               v-for="page in pages"
               :key="page.path"
               :to="page.path"
               :class="{ 'navbar-item': true, 'is-active': $route.path === page.path}"
-            >{{ page.text }}</router-link>
+            >{{ page.text }}</nuxt-link>
           </div>
         </div>
       </nav>
@@ -29,7 +29,7 @@
 
     <div class="hero-body">
       <transition name="page-transition" mode="out-in" appear>
-        <router-view/>
+        <nuxt />
       </transition>
     </div>
   </div>
@@ -38,16 +38,23 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 
-@Component
-export default class Home extends Vue {
-  pages = [
+interface Link {
+  text: string
+  path: string
+}
+
+@Component({
+  
+})
+export default class DefaultLayout extends Vue {
+  pages: Link[] = [
     { text: 'Home', path: '/' },
     { text: 'Portfolio', path: '/portfolio' },
     { text: 'Services', path: '/services' },
-    { text: 'Contact', path: '/contact' }
+    { text: 'Contact', path: '/contact' },
   ]
 
-  showMobileMenu = false
-  transitionName = 'page-transition-left'
+  showMobileMenu: boolean = false
+  transitionName: string = 'page-transition-left'
 }
 </script>
