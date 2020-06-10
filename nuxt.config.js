@@ -5,6 +5,9 @@ export default {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      class: 'antialiased'
+    },
     title: 'JM',
     meta: [
       { charset: 'utf-8' },
@@ -36,7 +39,7 @@ export default {
   buildModules: [
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    // '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss',
   ],
   /*
   ** Nuxt.js modules
