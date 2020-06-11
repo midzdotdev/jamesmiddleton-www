@@ -20,7 +20,7 @@
 
       <transition
         enter-active-class="transition-all duration-150 ease-in"
-        leave-active-class="transition-all duration-200 ease-in"
+        leave-active-class="transition-all duration-200 ease-out"
         enter-class="opacity-0"
         enter-to-class="opacity-100"
         leave-class="opacity-100"
