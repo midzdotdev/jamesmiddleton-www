@@ -34,8 +34,8 @@
     </p>
 
     <div class="flex mt-2">
-      <nuxt-link to="/portfolio" class="px-4 py-2 mr-3 text-black transition duration-200 border-2 border-black shadow-sm hover:bg-gray-900 hover:text-white">VIEW MY WORK</nuxt-link>
-      <nuxt-link to="/contact" class="px-4 py-2 mr-3 text-black transition duration-200 border-2 border-black shadow-sm hover:bg-gray-900 hover:text-white">HIRE ME</nuxt-link>
+      <nuxt-link to="/portfolio" class="px-4 py-2 mr-3 text-black transition duration-200 border-2 border-black shadow-sm hover:bg-gray-900 hover:text-white hover:shadow-lg">VIEW MY WORK</nuxt-link>
+      <nuxt-link to="/contact" class="px-4 py-2 mr-3 text-black transition duration-200 border-2 border-black shadow-sm hover:bg-gray-900 hover:text-white hover:shadow-lg">HIRE ME</nuxt-link>
     </div>
   </div>
 </template>
