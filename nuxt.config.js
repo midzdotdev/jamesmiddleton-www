@@ -38,7 +38,6 @@ export default {
   */
   buildModules: [
     '@nuxt/typescript-build',
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     'nuxt-purgecss',
   ],
