@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <span class="text-3xl font-medium text-gray-700">Ready when you are.</span>
+    <p class="text-3xl font-medium text-gray-700">Ready when you are.</p>
     
     <a
       class="-mt-3 text-6xl font-bold text-gray-800 transition-colors duration-300 ease-in-out hover:text-gray-900"
