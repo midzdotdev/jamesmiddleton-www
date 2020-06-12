@@ -78,6 +78,16 @@ interface PortfolioItem {
 
 const items: PortfolioItem[] = [
   {
+    title: 'Screening',
+    type: 'web application',
+    image: '#',
+    description: `
+      Enables ProVQ to accept apprenticeship applications and screen applicants automatically.
+      The tests are fully customisable, preventing the need to alter them through development.
+    `,
+    website: 'https://screening.provq.com',
+  },
+  {
     title: 'CryptoBase',
     type: 'website',
     image: '#',
@@ -98,16 +108,6 @@ const items: PortfolioItem[] = [
     `,
     github: 'https://github.com/james2mid/jamesmiddleton-www',
     // website: 'https://jamesmiddleton.me',
-  },
-  {
-    title: 'Screening',
-    type: 'web application',
-    image: '#',
-    description: `
-      Enables ProVQ to accept apprenticeship applications and screen applicants automatically.
-      The tests are fully customisable, preventing the need to alter them through development.
-    `,
-    website: 'https://screening.provq.com',
   },
   {
     title: 'Eden Labs',
