@@ -1,10 +1,18 @@
 <template>
   <div class="container max-w-3xl mx-auto">
     <div class="w-full py-5 pl-5 mx-auto mb-16 text-center bg-gray-700 rounded-lg shadow-inner">
-      <p class="mt-5 text-xl font-medium text-white">
+      <p class="mt-5 text-2xl font-medium text-white">
         Here are some example projects I've had the chance to work on.
       </p>
-      <div class="inline-block w-16 border-b-2 border-grey-500"></div>
+      
+      <transition
+        appear
+        appear-active-class="ease-in-out transform"
+        appear-class="scale-x-0"
+        appear-to-class="scale-x-100"
+      >
+        <div class="inline-block w-32 border-b-2 border-gray-400 shadow-md" :style="{ transitionDuration: (initialDelay*0.618)+'ms' }"></div>
+      </transition>
     </div>
 
     <transition-group
@@ -121,13 +129,13 @@ const items: PortfolioItem[] = [
   },
 ]
 
-const initialDelay = 2000
-const interval = 760
-
 @Component({
 
 })
 export default class Portfolio extends Vue {
+  initialDelay = 2000
+  interval = this.initialDelay / (1.618 ^ 2)
+
   created () {
     const staggerNext = () => {
       const currentIndex = this.items.length
@@ -136,11 +144,11 @@ export default class Portfolio extends Vue {
       this.items.push(currentItem)
 
       if (this.items.length < items.length) {
-        setTimeout(staggerNext, interval)
+        setTimeout(staggerNext, this.interval)
       }
     }
 
-    setTimeout(staggerNext, initialDelay)
+    setTimeout(staggerNext, this.initialDelay)
   }
 
   items: PortfolioItem[] = []
