@@ -1,21 +1,15 @@
 <template>
-  <div id="services" class="container">
-    <section class="section">
-      <h1 class="is-size-2 title">Digital Design</h1>
-      <h2 class="is-size-4 subtitle">Engage and convert.</h2>
-      <!-- <p>I design all sorts of things ranging from websites to flyers for advertising campaigns.</p> -->
-    </section>
-
-    <section class="section">
-      <h1 class="is-size-2 title">Development</h1>
-      <h2 class="is-size-4 subtitle">Employ technology full-time.</h2>
+  <div class="container space-y-10">
+    <div class="p-5 transition duration-500 ease-in-out rounded-lg shadow-md hover:shadow-lg">
+      <h1 class="text-4xl font-bold text-gray-800">Bespoke Software</h1>
+      <h2 class="text-xl text-gray-700">Employ technology full-time.</h2>
       <!-- <p>Beautiful code written on top of powerful, modern technologies allows delivery of a fast and reliable solution.</p> -->
-    </section>
+    </div>
 
-    <section class="section">
-      <h1 class="is-size-2 title">Consultancy</h1>
-      <h2 class="is-size-4 subtitle">Discover opportunities.</h2>
+    <div class="box-border p-5 border-4 border-gray-200 rounded-lg shadow-md border-">
+      <h1 class="text-4xl font-bold text-gray-800">Technical Consultancy</h1>
+      <h2 class="text-xl text-gray-700">Discover opportunities.</h2>
       <p></p>
-    </section>
+    </div>
   </div>
 </template>
