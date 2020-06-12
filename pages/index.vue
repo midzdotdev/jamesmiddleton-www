@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <p class="text-3xl font-medium">I'm James.</p>
+    <p class="text-3xl font-medium text-gray-700">I'm James.</p>
     <p class="-mt-2 text-6xl font-bold text-gray-800">
       I'm
 
       <transition
-        enter-active-class="transition-all duration-150 ease-in"
-        leave-active-class="transition-all duration-200 ease-out"
+        enter-active-class="transition duration-150 ease-in"
+        leave-active-class="transition duration-200 ease-out"
         enter-class="opacity-0"
         enter-to-class="opacity-100"
         leave-class="opacity-100"
@@ -19,10 +19,10 @@
       </transition>
 
       <transition
-        enter-active-class="transition-all duration-150 ease-in"
-        leave-active-class="transition-all duration-200 ease-out"
+        enter-active-class="transition duration-150 ease-in"
+        leave-active-class="transition duration-200 ease-out"
         enter-class="opacity-0"
-        enter-to-class="opacity-100"
+        enter-to-class="opacity-100 skew"
         leave-class="opacity-100"
         leave-to-class="opacity-0"
         mode="out-in"
@@ -34,8 +34,8 @@
     </p>
 
     <div class="flex mt-2">
-      <nuxt-link to="/portfolio" class="px-4 py-2 mr-3 text-black border-2 border-black hover:bg-gray-900 hover:text-white">VIEW MY WORK</nuxt-link>
-      <nuxt-link to="/contact" class="px-4 py-2 mr-3 text-black border-2 border-black hover:bg-gray-900 hover:text-white">HIRE ME</nuxt-link>
+      <nuxt-link to="/portfolio" class="px-4 py-2 mr-3 text-black transition duration-200 border-2 border-black shadow-sm hover:bg-gray-900 hover:text-white">VIEW MY WORK</nuxt-link>
+      <nuxt-link to="/contact" class="px-4 py-2 mr-3 text-black transition duration-200 border-2 border-black shadow-sm hover:bg-gray-900 hover:text-white">HIRE ME</nuxt-link>
     </div>
   </div>
 </template>
