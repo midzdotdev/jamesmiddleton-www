@@ -6,7 +6,7 @@ export default {
   */
   head: {
     htmlAttrs: {
-      class: 'antialiased bg-cool-gray-100'
+      class: 'antialiased bg-gray-100'
     },
     title: 'JM',
     meta: [
