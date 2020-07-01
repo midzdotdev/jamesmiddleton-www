@@ -28,7 +28,7 @@
         class="flex p-5 space-x-6 border border-gray-200 rounded-md shadow-md"
       >
         <!-- Project image -->
-        <img class="w-24 h-24 my-auto" :src="item.image" />
+        <img class="w-24 h-24 my-auto rounded-sm" :src="item.image" />
 
         <div>
           <div class="flex flex-wrap items-center space-x-5">
@@ -88,17 +88,17 @@ const items: PortfolioItem[] = [
   {
     title: 'Screening',
     type: 'web application',
-    image: '#',
+    image: '/provq-logo-q.svg',
     description: `
       Enables ProVQ to accept apprenticeship applications and screen applicants automatically.
-      The tests are fully customisable, preventing the need to alter them through development.
+      Tests are fully customisable, providing a CMS-like system.
     `,
     website: 'https://screening.provq.com',
   },
   {
     title: 'CryptoBase',
     type: 'website',
-    image: '#',
+    image: '/cryptobase.png',
     description: `
       Informative website for the upcoming platform.
       CryptoBase aims to be the central hub for all things cryptocurrency related.
@@ -110,7 +110,7 @@ const items: PortfolioItem[] = [
   {
     title: 'JM',
     type: 'website',
-    image: '#',
+    image: '/logo.svg',
     description: `
       Professional website showcasing past projects and the services I offer.
     `,
