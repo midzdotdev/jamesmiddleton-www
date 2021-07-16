@@ -17,8 +17,7 @@ const Home: React.FC = () => {
             <Image
               src={me}
               priority
-              layout="fill"
-              objectFit="cover"
+              layout="responsive"
               className="rounded-full"
               alt="Picture of James Middleton"
             />
