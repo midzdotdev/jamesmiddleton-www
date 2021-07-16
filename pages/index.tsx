@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <>
       <NextSeo
-        title="Home"
+        title="James Middleton"
         description="I help people to build intuitive and immersive solutions on the web."
       />
       <div className="flex flex-col items-center justify-center min-h-screen px-5 py-5 space-y-24 select-none md:p-10 bg-gray-50">
