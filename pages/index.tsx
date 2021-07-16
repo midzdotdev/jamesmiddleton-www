@@ -35,7 +35,7 @@ const Home: React.FC = () => {
             </div>
 
             <a
-              href="https://calendly.com/james-middleton/30-meet"
+              href="https://calendly.com/james-middleton/initial-consultation"
               className="inline-block px-4 py-2 text-lg font-semibold text-white transition duration-300 bg-blue-500 rounded-md shadow-md transform-gpu hover:shadow-lg hover:scale-105"
             >
               Hire Me
