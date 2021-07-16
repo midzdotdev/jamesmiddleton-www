@@ -1,7 +1,7 @@
 import { NextSeo } from 'next-seo'
 import Image from 'next/image'
 import React from 'react'
-import { FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa'
 import me from '../public/me.jpg'
 
 const Home: React.FC = () => {
@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       />
       <div className="flex flex-col items-center justify-center min-h-screen px-5 py-5 space-y-24 select-none md:p-10 bg-gray-50">
         <main className="flex flex-col items-center justify-center space-y-16 text-center sm:space-x-0 lg:space-x-24 md:space-y-0 md:space-x-16 md:flex-row md:text-left">
-          <div className="relative w-56 h-56 border-8 border-white rounded-full shadow-2xl md:w-72 md:h-72 p-auto">
+          <div className="w-56 h-56 border-8 border-white rounded-full shadow-md md:w-72 md:h-72 p-auto">
             <Image
               src={me}
               priority
@@ -42,7 +42,14 @@ const Home: React.FC = () => {
           </div>
         </main>
 
-        <div className="space-x-5 text-center">
+        <div className="flex space-x-8 text-center">
+          <a
+            href="https://github.com/james2mid"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub className="inline-block w-10 h-10 text-gray-400 transition-colors duration-300 hover:text-gray-500" />
+          </a>
           <a
             href="https://twitter.com/james2mid"
             target="_blank"
@@ -50,12 +57,13 @@ const Home: React.FC = () => {
           >
             <FaTwitter className="inline-block w-10 h-10 text-gray-400 transition-colors duration-300 hover:text-gray-500" />
           </a>
+
           <a
-            href="https://github.com/james2mid"
+            href="mailto:hello@jamesmiddleton.me"
             target="_blank"
             rel="noreferrer"
           >
-            <FaGithub className="inline-block w-10 h-10 text-gray-400 transition-colors duration-300 hover:text-gray-500" />
+            <FaEnvelope className="inline-block w-10 h-10 text-gray-400 transition-colors duration-300 hover:text-gray-500" />
           </a>
         </div>
       </div>
